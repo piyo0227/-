@@ -1,2 +1,103 @@
-堂井くん
-ハゲですww
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>堂井くんの自己紹介</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background: linear-gradient(to bottom, #6c8ebf, #a3c1da);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .rain {
+      position: fixed;
+      width: 2px;
+      height: 100px;
+      background: rgba(255,255,255,0.4);
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100px); }
+      100% { transform: translateY(100vh); }
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(0,0,0,0.2);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      border-bottom: 2px solid rgba(255,255,255,0.5);
+      padding-bottom: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>堂井くんのページ</h1>
+    <p>〜梅雨のように、しっとりとした自己紹介〜</p>
+  </header>
+
+  <div class="content">
+    <h2>プロフィール</h2>
+    <p>名前：堂井くん</p>
+    <p>好きなこと：ゲーム・勉強・新しいことに挑戦すること</p>
+
+    <h2>ひとこと</h2>
+    <p>
+      梅雨の雨のように静かだけど、
+      一滴一滴が大切だと思っています。
+    </p>
+
+    <h2>目標</h2>
+    <p>
+      毎日少しずつ成長して、
+      大きな成果を出せる人になること！
+    </p>
+  </div>
+
+  <footer>
+    © 2026 堂井くん
+  </footer>
+
+  <script>
+    // 雨のエフェクト
+    for (let i = 0; i < 100; i++) {
+      const rain = document.createElement('div');
+      rain.classList.add('rain');
+      rain.style.left = Math.random() * window.innerWidth + 'px';
+      rain.style.animationDuration = (Math.random() * 1 + 0.5) + 's';
+      rain.style.opacity = Math.random();
+      document.body.appendChild(rain);
+    }
+  </script>
+
+</body>
+</html>
